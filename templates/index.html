@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loader(){
+            document.getElementById("loader").style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+</body>
+
+<div id="navbar">GApps Slimmer</div>
+
+
+<div id="form">
+    <form method="GET" action="/output/" for="inputs" >
+    {% csrf_token %}
+
+
+    <div class="card">
+    <label><input type="checkbox" name="true[]" value="androidauto" />androidauto<br></label>
+    <label><input type="checkbox" name="true[]" value="books" />books<br></label>
+    <label><input type="checkbox" name="true[]" value="googlecamera" />googlecamera<br></label>
+    <label><input type="checkbox" name="true[]" value="newsstand" />newsstand<br></label>
+    <label><input type="checkbox" name="true[]" value="duo" />duo<br></label>
+    <label><input type="checkbox" name="true[]" value="googlepay" />googlepay<br></label>
+    <label><input type="checkbox" name="true[]" value="keep" />keep<br></label>
+    <label><input type="checkbox" name="true[]" value="movies" />movies<br></label>
+    <label><input type="checkbox" name="true[]" value="music" />music<br></label>
+    <label><input type="checkbox" name="true[]" value="pixellauncher" />pixellauncher<br></label>
+    <label><input type="checkbox" name="true[]" value="translate" />translate<br></label>
+    <label><input type="checkbox" name="true[]" value="youtube" />youtube<br></label>
+    <label><input type="checkbox" name="true[]" value="contactsgoogle" />contactsgoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="calculatorgoogle" />calculatorgoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="calendargoogle" />calendargoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="calsync" />calsync<br></label>
+    <label><input type="checkbox" name="true[]" value="googletts" />googletts<br></label>
+    <label><input type="checkbox" name="true[]" value="wallpapers" />wallpapers<br></label>
+    <label><input type="checkbox" name="true[]" value="dialergoogle" />dialergoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="clockgoogle" />clockgoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="messenger" />messenger<br></label>
+    <label><input type="checkbox" name="true[]" value="chrome" />chrome<br></label>
+    <label><input type="checkbox" name="true[]" value="wellbeing" />wellbeing<br></label>
+    <label><input type="checkbox" name="true[]" value="maps" />maps<br></label>
+</div>
+
+<div class="card">
+    <label><input type="checkbox" name="true[]" value="photos" />photos<br></label>
+    <label><input type="checkbox" name="true[]" value="photosvrmode" />photosvrmode<br></label>
+    <label><input type="checkbox" name="true[]" value="playgames" />playgames<br></label>
+    <label><input type="checkbox" name="true[]" value="keyboardgoogle" />keyboardgoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="gmail" />gmail<br></label>
+    <label><input type="checkbox" name="true[]" value="exchangegoogle" />exchangegoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="drive" />drive<br></label>
+    <label><input type="checkbox" name="true[]" value="vrservices" />vrservices<br></label>
+    <label><input type="checkbox" name="true[]" value="taggoogle" />taggoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="webviewgoogle" />webviewgoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="recorder" />recorder<br></label>
+    <label><input type="checkbox" name="true[]" value="search" />search<br></label>
+    <label><input type="checkbox" name="true[]" value="talkback" />talkback<br></label>
+    <label><input type="checkbox" name="true[]" value="printservicegoogle" />printservicegoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="storagemanagergoogle" />storagemanagergoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="packageinstallergoogle" />packageinstallergoogle<br></label>
+    <label><input type="checkbox" name="true[]" value="webviewstub" />webviewstub<br></label>
+    <label><input type="checkbox" name="true[]" value="cloudprint" />cloudprint<br></label>
+    <label><input type="checkbox" name="true[]" value="actionsservices" />actionsservices<br></label>
+    <label><input type="checkbox" name="true[]" value="speech" />speech<br></label>
+    <label><input type="checkbox" name="true[]" value="batteryusage" />batteryusage<br></label>
+    <label><input type="checkbox" name="true[]" value="markup" />markup<br></label>
+    <label><input type="checkbox" name="true[]" value="dialerframework" />dialerframework<br></label>
+    <label><input type="checkbox" name="true[]" value="soundpicker" />soundpicker<br></label>
+</div>
+
+    <div style="margin: 40px 0 0 0;"><input id="submit" type="submit" value="" onclick="loader()"/>
+    <div style="display: none;float:right;" id="loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block; shape-rendering: auto;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <circle cx="50" cy="50" fill="none" stroke="#e15b64" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+          <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"/>
+        </circle>
+    </svg></div>
+</div>
+    </form> 
+
+    {% block output %}
+    {% endblock output %}
+</div>
+</body>
+</html>
